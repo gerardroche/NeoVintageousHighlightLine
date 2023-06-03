@@ -1,6 +1,6 @@
 # NeoVintageous Highlight Line
 
-A [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous) plugin to auto disable line highlighting when in Insert and Visual mode.
+A [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous) plugin to auto disable highlight line in Insert and Visual modes.
 
 ## Installation
 
