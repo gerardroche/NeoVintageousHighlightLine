@@ -29,7 +29,7 @@ try:
         def on_insert_leave(self, view, new_mode: str) -> None:
             _highlight_line(view, True)
 
-    register(Listener())
+    register(__package__, Listener())
 
 except ImportError:
 
