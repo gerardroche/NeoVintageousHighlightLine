@@ -18,6 +18,34 @@
 import sublime
 import sublime_plugin
 
+try:
+    from NeoVintageous.nv.listener import register
+
+    class Listener():
+
+        def on_insert_enter(self, view, from_mode: str) -> None:
+            _highlight_line(view, False)
+
+        def on_insert_leave(self, view, new_mode: str) -> None:
+            _highlight_line(view, True)
+
+    register(Listener())
+
+except ImportError:
+
+    # Support for NeoVintageous < 1.32.0
+
+    class NeovintageousLineHighlightCompat(sublime_plugin.EventListener):
+
+        def on_post_text_command(self, view, command_name, args):
+            if _is_normal_view(view):
+                highlight_line = view.settings().get('highlight_line')
+                if view.settings().get('command_mode'):
+                    if highlight_line is False:
+                        _highlight_line(view, True)
+                elif highlight_line is True:
+                    _highlight_line(view, False)
+
 
 if int(sublime.version()) >= 4050:
     def _is_normal_view(view) -> bool:
@@ -32,7 +60,7 @@ else:
         return settings and not settings.get('is_widget', False)
 
 
-def _set_highlight(view, flag: bool) -> None:
+def _highlight_line(view, flag: bool) -> None:
     view.settings().set('highlight_line', flag)
     view.settings().set('highlight_gutter', flag)
 
@@ -41,17 +69,8 @@ class NeovintageousLineHighlight(sublime_plugin.EventListener):
 
     def on_deactivated(self, view):
         if _is_normal_view(view):
-            _set_highlight(view, False)
+            _highlight_line(view, False)
 
     def on_activated(self, view):
         if _is_normal_view(view):
-            _set_highlight(view, True)
-
-    def on_post_text_command(self, view, command_name, args):
-        if _is_normal_view(view):
-            highlight_line = view.settings().get('highlight_line')
-            if view.settings().get('command_mode'):
-                if highlight_line is False:
-                    _set_highlight(view, True)
-            elif highlight_line is True:
-                _set_highlight(view, False)
+            _highlight_line(view, True)
