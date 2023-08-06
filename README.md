@@ -1,10 +1,18 @@
 # NeoVintageous Highlight Line
 
-A [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous) plugin to auto disable highlight line in Insert and Visual modes.
+Auto-disable highlight line when entering Insert mode and Visual modes. This functionality is supported by [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous), a Vim emulator plugin for Sublime Text.
 
 ## Installation
 
 Install [NeoVintageousHighlightLine](https://packagecontrol.io/packages/NeoVintageousHighlightLine) via Package Control.
+
+## Highlight Line
+
+Here are some related Vim commands:
+
+| Command                   | Alias             | Description
+| :-------------------------| :-----------------| :----------
+| `yoc`                     | `coc`             | Toggle highlight line (Unimpaired plugin).
 
 ## License
 
