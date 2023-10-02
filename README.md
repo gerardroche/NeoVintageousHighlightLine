@@ -1,17 +1,17 @@
-# Seamless Highlight Line Management
+# NeoVintageous Highlight Line Management
 
-Experience uninterrupted focus as the highlight line automatically deactivates upon entering Insert mode and Visual modes. This refined functionality is made possible by [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous), a powerful Vim emulator plugin designed for Sublime Text.
+Achieve a seamless writing and editing experience with NeoVintageous Highlight Line Management. This Sublime Text plugin ensures that the highlight line gracefully deactivates when you enter Insert mode or Visual mode, allowing you to focus on your content without distraction. This refined functionality is made possible by [NeoVintageous](https://github.com/NeoVintageous/NeoVintageous), a robust Vim emulator plugin designed specifically for Sublime Text.
 
 ## Installation
 
-**Method 1: Using Package Control**
+### Method 1: Using Package Control
 
 1. Open Sublime Text.
 2. Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS) to open the Command Palette.
 3. Type "Package Control: Install Package" and press `Enter`.
 4. In the input field, type "NeoVintageousHighlightLine" and select it from the list of available packages.
 
-**Method 2: Manual Installation**
+### Method 2: Manual Installation
 
 1. Visit the [NeoVintageousHighlightLine GitHub repository](https://github.com/gerardroche/NeoVintageousHighlightLine).
 2. Click on the "Code" button and select "Download ZIP."
@@ -19,7 +19,7 @@ Experience uninterrupted focus as the highlight line automatically deactivates u
 4. Open Sublime Text and go to `Preferences -> Browse Packages...` to open the Packages folder.
 5. Copy the "NeoVintageousHighlightLine" folder from the extracted ZIP and paste it into the Packages folder.
 
-**Method 3: Manual Git Repository Installation**
+### Method 3: Manual Git Repository Installation
 
 1. Open a terminal or command prompt.
 2. Navigate to the Sublime Text Packages directory:
@@ -31,9 +31,9 @@ Experience uninterrupted focus as the highlight line automatically deactivates u
    git clone https://github.com/gerardroche/NeoVintageousHighlightLine.git NeoVintageousHighlightLine
    ```
 
-## Harness the Power of Highlighted Lines
+## Unleash the Power of Highlighted Lines
 
-Here are some related commands:
+Take control of your editing environment with these convenient commands:
 
 | Command                   | Alias             | Description
 | :-------------------------| :-----------------| :----------
